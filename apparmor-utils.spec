@@ -8,7 +8,7 @@ Release: %mkrel 1.%rev.1
 License: GPL
 Group: System/Base
 Source0: apparmor-utils-%{ver}-%{rev}.tar.gz
-URL: http://developer.novell.com/wiki/index.php/Novell_AppArmor
+URL: http://forge.novell.com/modules/xfmod/project/?apparmor
 BuildRoot: %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
 BuildArch: noarch
 
@@ -33,7 +33,6 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %dir %{_sysconfdir}/apparmor
 %config(noreplace) %{_sysconfdir}/apparmor/logprof.conf
-# XXX db? config?
 %config(noreplace) %{_sysconfdir}/apparmor/severity.db
 %{_datadir}/locale/*/*/apparmor-utils.mo
 %{_sbindir}/*
