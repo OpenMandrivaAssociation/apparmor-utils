@@ -1,5 +1,5 @@
-%define ver 2.0.2
-%define rev 743
+%define ver 2.1.2
+%define rev 1089
 
 Name: apparmor-utils
 Summary: AppArmor userlevel utilities
@@ -39,6 +39,7 @@ rm -rf %{buildroot}
 %{_libdir}/perl5/vendor_perl/Immunix
 %{_var}/log/apparmor
 %{_mandir}/man5/logprof.conf.5*
+%{_mandir}/man8/aa-audit.8*
 %{_mandir}/man8/aa-autodep.8*
 %{_mandir}/man8/aa-complain.8*
 %{_mandir}/man8/aa-enforce.8*
@@ -48,9 +49,9 @@ rm -rf %{buildroot}
 %{_mandir}/man8/aa-unconfined.8*
 %{_mandir}/man8/apparmor_status.8*
 %{_mandir}/man8/autodep.8*
+%{_mandir}/man8/audit.8*
 %{_mandir}/man8/complain.8*
 %{_mandir}/man8/enforce.8*
 %{_mandir}/man8/genprof.8*
 %{_mandir}/man8/logprof.8*
 %{_mandir}/man8/unconfined.8*
-
