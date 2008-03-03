@@ -4,10 +4,13 @@
 Name: apparmor-utils
 Summary: AppArmor userlevel utilities
 Version: %ver
-Release: %mkrel 1.%rev.1
+Release: %mkrel 1.%rev.2
 License: GPL
 Group: System/Base
 Source0: apparmor-utils-%{ver}-%{rev}.tar.gz
+# fix some translations that were preventing the program from working
+# https://qa.mandriva.com/show_bug.cgi?id=38292
+Patch: apparmor-utils-2.1.2-1089-pt_BR.patch
 URL: http://forge.novell.com/modules/xfmod/project/?apparmor
 BuildRoot: %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
 BuildArch: noarch
@@ -18,6 +21,7 @@ profiles.
 
 %prep
 %setup -q
+%patch -p1 -b .i18n
 
 %build
 %make
