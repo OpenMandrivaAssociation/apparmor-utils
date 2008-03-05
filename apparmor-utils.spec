@@ -4,7 +4,7 @@
 Name: apparmor-utils
 Summary: AppArmor userlevel utilities
 Version: %ver
-Release: %mkrel 1.%rev.3
+Release: %mkrel 1.%rev.4
 License: GPL
 Group: System/Base
 Source0: apparmor-utils-%{ver}-%{rev}.tar.gz
@@ -28,7 +28,7 @@ profiles.
 
 %install
 rm -rf %{buildroot}
-%{makeinstall_std} PERLDIR=%{buildroot}%{_libdir}/perl5/vendor_perl/Immunix
+%{makeinstall_std} PERLDIR=%{buildroot}%{perl_vendorlib}/Immunix
 
 %clean
 rm -rf %{buildroot}
@@ -40,7 +40,7 @@ rm -rf %{buildroot}
 %config(noreplace) %{_sysconfdir}/apparmor/severity.db
 %{_datadir}/locale/*/*/apparmor-utils.mo
 %{_sbindir}/*
-%{_libdir}/perl5/vendor_perl/Immunix
+%{perl_vendorlib}/Immunix
 %{_var}/log/apparmor
 %{_mandir}/man5/logprof.conf.5*
 %{_mandir}/man8/aa-audit.8*
