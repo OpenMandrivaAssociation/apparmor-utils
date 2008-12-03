@@ -4,10 +4,11 @@
 Name: apparmor-utils
 Summary: AppArmor userlevel utilities
 Version: %ver
-Release: %mkrel 1.%rev.1
+Release: %mkrel 1.%rev.2
 License: GPL
 Group: System/Base
 Source0: apparmor-utils-%{ver}-%{rev}.tar.gz
+Patch: apparmor-utils-2.3-perl_fix.diff
 URL: http://forge.novell.com/modules/xfmod/project/?apparmor
 BuildRoot: %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
 BuildArch: noarch
@@ -18,6 +19,7 @@ profiles.
 
 %prep
 %setup -q
+%patch -p0
 
 %build
 %make
