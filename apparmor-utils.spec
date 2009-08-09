@@ -4,7 +4,7 @@
 Name: apparmor-utils
 Summary: AppArmor userlevel utilities
 Version: %ver
-Release: %mkrel 1.%rev.2
+Release: %mkrel 1.%rev.3
 License: GPL
 Group: System/Base
 Source0: apparmor-utils-%{ver}-%{rev}.tar.gz
